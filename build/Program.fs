@@ -117,7 +117,7 @@ let main (args: string[]) =
     Console.WriteLine(Swag.logo)
     try
         match args with
-        | [| "RunDefaultOr" |] -> Target.runOrDefault "Default"
+        | [| "RunDefaultOr" |] -> Target.runOrDefault "Pack"
         | [| "RunDefaultOr"; target |] -> Target.runOrDefault target
         | manyArguments ->
             Console.Write("[Interactive Mode] Run build target: ")
