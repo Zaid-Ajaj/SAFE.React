@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+    <AspNetCoreModuleName>AspNetCoreModule</AspNetCoreModuleName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Env.fs" />
+    <Compile Include="ServerApi.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fable.Remoting.Giraffe" Version="4.10.0" />
+    <PackageReference Include="Saturn" Version="0.14.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\shared\Shared.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.7.2" />
+  </ItemGroup>
+
+</Project>
