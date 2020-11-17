@@ -4,6 +4,7 @@ module Extensions
 open Elmish
 open System
 open Fable.Core
+open Fable.Core.JsInterop
 
 let isDevelopment =
     #if DEBUG
@@ -36,15 +37,8 @@ module Cmd =
 [<RequireQualifiedAccess>]
 module StaticFile =
 
-    open Fable.Core.JsInterop
-
-    /// Function that imports a static file by it's relative path. Ignores the file when compiled for mocha tests.
-    let inline import (path: string) : string =
-        #if !MOCHA_TESTS
-        importDefault<string> path
-        #else
-        path
-        #endif
+    /// Function that imports a static file by it's relative path.
+    let inline import (path: string) : string = importDefault<string> path
 
 [<RequireQualifiedAccess>]
 module Config =
@@ -59,3 +53,15 @@ module Config =
         if String.IsNullOrWhiteSpace foundValue
         then defaultValue
         else foundValue
+
+// Stylesheet API
+// let stylehsheet = Stylesheet.load "./fancy.css"
+// stylesheet.["fancy-class"] which returns a string
+module Stylesheet =
+
+    type IStylesheet =
+        [<Emit "$0[$1]">]
+        abstract Item : className:string -> string
+
+    /// Loads a CSS module and makes the classes within available
+    let inline load (path: string) = importDefault<IStylesheet> path
