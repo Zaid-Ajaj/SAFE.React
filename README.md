@@ -1,6 +1,6 @@
 # SAFE.React
 
-Full Stack F# powered by ASP.NET Core on the backend and modern React on the front-end.
+Full Stack F# powered by ASP.NET Core on the backend and modern React on the frontend.
 
 A lightweight alternative template to the full-fledged official [SAFE Template](https://github.com/SAFE-Stack/SAFE-template). Lowers the entry barrier by choosing the simplest possible opinionated defaults:
  - Nuget for package management
