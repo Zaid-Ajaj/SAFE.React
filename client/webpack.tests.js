@@ -1,10 +1,8 @@
 // Template for webpack.config.js in Fable projects
-// Find latest version in https://github.com/fable-compiler/webpack-config-template
-
 // In most cases, you'll only need to edit the CONFIG object (after dependencies)
 // See below if you need better fine-tuning of Webpack options
 
-// Dependencies. Also required: core-js, fable-loader, fable-compiler, @babel/core,
+// Dependencies. Also required: core-js, @babel/core,
 // @babel/preset-env, babel-loader
 var path = require("path");
 var webpack = require("webpack");
@@ -12,6 +10,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const Dotenv = require('dotenv-webpack');
+const { patchGracefulFileSystem } = require("./webpack.common.js");
+patchGracefulFileSystem();
 
 var CONFIG = {
     // The tags to include the generated JS and CSS will be automatically injected in the HTML template
