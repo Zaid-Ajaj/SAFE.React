@@ -5,6 +5,7 @@
     <ItemGroup>
         <None Include="styles\main.scss" />
         <None Include="index.html" />
+        <Compile Include="Server.fs" />
         <Compile Include="Extensions.fs" />
         <Compile Include="Components.fs" />
         <Compile Include="Main.fs" />
@@ -12,10 +13,10 @@
     <ItemGroup />
     <ItemGroup>
         <PackageReference Include="Fable.DateFunctions" Version="3.2.0" />
-        <PackageReference Include="Fable.Remoting.Client" Version="7.1.0" />
+        <PackageReference Include="Fable.Remoting.Client" Version="7.2.0" />
         <PackageReference Include="Feliz" Version="1.17.0" />
         <PackageReference Include="Feliz.Router" Version="3.2.0" />
-        <PackageReference Include="Feliz.UseDeferred" Version="1.3.0" />
+        <PackageReference Include="Feliz.UseDeferred" Version="1.4.0" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\..\shared\Shared.fsproj" />
