@@ -117,7 +117,7 @@ Html.div [
 You can still use global classes for your application and use them everywhere but you have to specify that they are indeed global as follows:
 ```css
 /* File ./styles/global.css */
-:gloabl(.container) {
+:global(.container) {
   padding: 20px;
   color: lightblue;
 }
