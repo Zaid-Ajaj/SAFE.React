@@ -103,7 +103,7 @@ Define your stylesheet in CSS or SASS like this:
 ```
 Then, from the F# code, you can import the CSS module and use it as follows:
 ```fs
-let stylesheet = Stylesheet.load "./styles/counter.css"
+let private stylesheet = Stylesheet.load "./styles/counter.css"
 
 Html.div [
   prop.className stylesheet.["container"]
@@ -113,6 +113,8 @@ Html.div [
   ]
 ]
 ```
+
+> Use private values for the stylesheets to avoid problems with React refresh 
 
 You can still use global classes for your application and use them everywhere but you have to specify that they are indeed global as follows:
 ```css
