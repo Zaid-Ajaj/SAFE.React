@@ -4,7 +4,8 @@ open Fable.Core.JsInterop
 open Feliz
 open Browser.Dom
 
-importSideEffects "./styles/main.scss"
+// import global styles here
+importSideEffects "./styles/global.scss"
 
 ReactDOM.render(
     Components.counter(),

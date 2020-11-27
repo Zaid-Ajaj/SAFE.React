@@ -11,10 +11,11 @@
         "test": "dotnet fable tests --outDir dist/tests && mocha dist/tests -r esm"
     },
     "dependencies": {
+        "bulma": "^0.9.1",
         "date-fns": "^2.16.1",
         "pigeon-maps": "^0.16.1",
-        "react": "^16.14.0",
-        "react-dom": "^16.14.0",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
         "react-popover": "^0.5.10",
         "recharts": "^1.8.5",
         "remotedev": "^0.2.9"

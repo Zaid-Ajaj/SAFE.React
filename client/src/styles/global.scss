@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+
+// you can import third-party (S)CSS from node module packages
+// for example to include bulma and make all its classes available,
+// simply uncomment the following class name
+// @import "bulma";
+
+* {
+    font-family: 'Spartan', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}

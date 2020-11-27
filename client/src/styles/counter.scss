@@ -1,0 +1,19 @@
+:global(.counter) {
+    border-width: 2px;
+    border-color: red;
+    border-style: solid;
+}
+
+.increment-button {
+    border-width: 2px;
+    border-color: aquamarine;
+    background-color: aquamarine;
+    border-style: solid;
+    margin: 10px;
+    padding: 10px;
+}
+
+.main-container {
+    padding: 20px;
+    font-size: 24px;
+}

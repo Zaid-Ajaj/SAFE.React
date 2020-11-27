@@ -24,7 +24,7 @@ var CONFIG = {
     // See https://github.com/jantimon/html-webpack-plugin
     indexHtmlTemplate: "./src/index.html",
     fsharpEntry: "./src/Main.fs.js",
-    cssEntry: "./src/styles/main.scss",
+    cssEntry: "./src/styles/global.scss",
     outputDir: "./dist",
     assetsDir: "./public",
     devServerPort: 8080,
@@ -157,6 +157,7 @@ module.exports = {
             },
             {
                 test: /\.(sass|scss|css)$/,
+                exclude: /global.scss/,
                 use: [
                     isProduction
                         ? MiniCssExtractPlugin.loader
@@ -166,6 +167,22 @@ module.exports = {
                         options: {
                             modules: true
                         }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: { implementation: require("sass") }
+                    }
+                ],
+            },
+            {
+                test: /\.(sass|scss|css)$/,
+                include: /global.scss/,
+                use: [
+                    isProduction
+                        ? MiniCssExtractPlugin.loader
+                        : 'style-loader',
+                    {
+                        loader: 'css-loader'
                     },
                     {
                         loader: 'sass-loader',

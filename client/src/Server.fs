@@ -32,7 +32,7 @@ let normalizeRoutes typeName methodName =
     Shared.routerPaths typeName methodName
     |> normalize
 
-let api =
+let Api =
     Remoting.createApi()
     |> Remoting.withRouteBuilder normalizeRoutes
     |> Remoting.buildProxy<Shared.IServerApi>
