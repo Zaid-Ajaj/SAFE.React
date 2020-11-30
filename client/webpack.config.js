@@ -41,17 +41,7 @@ var CONFIG = {
     // More info at https://babeljs.io/docs/en/next/babel-preset-env.html
     babel: {
         plugins: [isDevelopment && require.resolve('react-refresh/babel')].filter(Boolean),
-        presets: [
-            ["@babel/preset-react"],
-            ["@babel/preset-env", {
-                "targets": "> 0.25%, not dead",
-                "modules": false,
-                // This adds polyfills when needed. Requires core-js dependency.
-                // See https://babeljs.io/docs/en/babel-preset-env#usebuiltins
-                "useBuiltIns": "usage",
-                "corejs": 3
-            }]
-        ],
+        presets: ["@babel/preset-env", "@babel/preset-react"]
     }
 }
 
@@ -120,7 +110,6 @@ module.exports = {
             }),
         ])
         : commonPlugins.concat([
-            new webpack.HotModuleReplacementPlugin(),
             new ReactRefreshWebpackPlugin()
         ]),
     resolve: {
