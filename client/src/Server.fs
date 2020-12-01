@@ -18,8 +18,7 @@ let virtualPath : string =
 /// Takes path segments and combines them into a valid path
 let combine (paths: string list) =
     paths
-    |> List.map (fun path -> List.ofArray (path.Split('/')))
-    |> List.concat
+    |> List.collect (fun path -> List.ofArray (path.Split('/')))
     |> List.filter (fun segment -> not (segment.Contains(".")))
     |> List.filter (String.IsNullOrWhiteSpace >> not)
     |> String.concat "/"
