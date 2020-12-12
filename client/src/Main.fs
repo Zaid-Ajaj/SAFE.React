@@ -8,6 +8,6 @@ open Browser.Dom
 importSideEffects "./styles/global.scss"
 
 ReactDOM.render(
-    Components.counter(),
+    Components.Counter(),
     document.getElementById("feliz-app")
 )
