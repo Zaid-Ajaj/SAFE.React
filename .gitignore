@@ -18,3 +18,4 @@ NPGSQL_FSHARP
 .parcel-cache
 *.fs.js
 talk.md
+.idea
