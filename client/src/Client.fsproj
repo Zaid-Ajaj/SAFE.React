@@ -9,6 +9,8 @@
         <Compile Include="Extensions.fs" />
         <Compile Include="Components.fs" />
         <Compile Include="Main.fs" />
+        <Content Include="public\img\favicon-32x32.png" />
+        <Content Include="public\img\favicon-16x16.png" />
     </ItemGroup>
     <ItemGroup />
     <ItemGroup>
