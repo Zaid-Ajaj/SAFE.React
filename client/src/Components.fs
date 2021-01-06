@@ -67,7 +67,7 @@ let ServerCounter() =
     | Deferred.HasNotStartedYet -> Html.none
     | Deferred.InProgress -> Html.h1 "Loading"
     | Deferred.Failed error -> Html.h1 error.Message
-    | Deferred.Resolved counter -> Html.h1 counter.value
+    | Deferred.Resolved counter -> Html.h1 counter.Value
 
 // Simple interop with existing React components
 // input parameters are compiled as props for the imported component
