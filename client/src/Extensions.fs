@@ -20,7 +20,7 @@ module Log =
         then Browser.Dom.console.error(error)
 
 module Cmd =
-    /// Converts an asynchronous operation that returns a message into into a command of that message.
+    /// Converts an asynchronous operation that returns a message into a command of that message.
     /// Logs unexpected errors to the console while in development mode.
     let fromAsync (operation: Async<'msg>) : Cmd<'msg> =
         let delayedCmd (dispatch: 'msg -> unit) : unit =
@@ -43,7 +43,7 @@ module StaticFile =
 [<RequireQualifiedAccess>]
 module Config =
     /// Returns the value of a configured variable using its key.
-    /// Retursn empty string when the value does not exist
+    /// Returns empty string when the value does not exist
     [<Emit("process.env[$0] ? process.env[$0] : ''")>]
     let variable (key: string) : string = jsNative
 
