@@ -73,8 +73,7 @@ let ServerCounter() =
 // input parameters are compiled as props for the imported component
 // Use the component just like a function: About "Feliz"
 [<ReactComponent(import="About", from="./About.jsx")>]
-let About (title: string) = Html.none
-
+let About (title: string) = React.imported()
 
 open Feliz.Router
 

@@ -12,11 +12,11 @@
     </ItemGroup>
     <ItemGroup />
     <ItemGroup>
-        <PackageReference Include="Fable.DateFunctions" Version="3.5.0" />
-        <PackageReference Include="Fable.Remoting.Client" Version="7.2.0" />
-        <PackageReference Include="Feliz" Version="1.29.0" />
-        <PackageReference Include="Feliz.Router" Version="3.5.0" />
-        <PackageReference Include="Feliz.UseDeferred" Version="1.4.0" />
+        <PackageReference Include="Fable.DateFunctions" Version="3.7.0" />
+        <PackageReference Include="Fable.Remoting.Client" Version="7.4.0" />
+        <PackageReference Include="Feliz" Version="1.36.0" />
+        <PackageReference Include="Feliz.Router" Version="3.7.0" />
+        <PackageReference Include="Feliz.UseDeferred" Version="1.4.1" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\..\shared\Shared.fsproj" />
