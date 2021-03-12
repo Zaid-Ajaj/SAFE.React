@@ -3,7 +3,8 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
-        <None Include="styles\main.scss" />
+        <None Include="styles\counter.module.scss" />
+        <None Include="styles\global.scss" />
         <None Include="index.html" />
         <Compile Include="Server.fs" />
         <Compile Include="Extensions.fs" />
@@ -12,7 +13,6 @@
         <Content Include="public\img\favicon-32x32.png" />
         <Content Include="public\img\favicon-16x16.png" />
     </ItemGroup>
-    <ItemGroup />
     <ItemGroup>
         <PackageReference Include="Fable.DateFunctions" Version="3.7.0" />
         <PackageReference Include="Fable.Remoting.Client" Version="7.5.0" />
