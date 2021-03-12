@@ -55,7 +55,7 @@ module Config =
         else foundValue
 
 // Stylesheet API
-// let stylehsheet = Stylesheet.load "./fancy.css"
+// let stylehsheet = Stylesheet.load "./fancy.module.css"
 // stylesheet.["fancy-class"] which returns a string
 module Stylesheet =
 
