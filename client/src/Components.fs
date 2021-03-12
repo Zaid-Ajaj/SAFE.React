@@ -3,6 +3,7 @@ module Components
 open Feliz
 
 // A simple React component
+// Learn more about Feliz here https://zaid-ajaj.github.io/Feliz
 
 [<ReactComponent>]
 let Counter() =
@@ -20,7 +21,7 @@ let Counter() =
 
 // Using locally defined stylesheet modules
 // make sure the value is 'private'
-let private stylesheet = Stylesheet.load "./styles/counter.scss"
+let private stylesheet = Stylesheet.load "./styles/counter.module.scss"
 
 // use class names from the stylesheet
 [<ReactComponent>]
@@ -39,6 +40,7 @@ let StyledCounter() =
     ]
 
 // Using imported global Bulma classes from global.scss
+// the import is commented out
 [<ReactComponent>]
 let BulmaCounter() =
     let (count, setCount) = React.useState(0)

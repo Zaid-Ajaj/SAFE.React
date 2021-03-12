@@ -93,9 +93,9 @@ Since this file can contain variables that might contain sensitive data. It is g
 
 This template uses scoped CSS modules by default. Scoped CSS modules allow you to define specific stylehsheets (modules) for specific React components without using global classes and worrying about whether they will collide or not.
 
-Define your stylesheet in CSS or SASS like this:
+Define your stylesheet in CSS or SASS like this with the extension `.module.scss` or `.module.css`:
 ```css
-/* File ./styles/counter.css */
+/* File ./styles/counter.module.css */
 .container {
   padding: 20px;
   color: lightblue;
@@ -103,14 +103,14 @@ Define your stylesheet in CSS or SASS like this:
 ```
 Then, from the F# code, you can import the CSS module and use it as follows:
 ```fs
-let private stylesheet = Stylesheet.load "./styles/counter.css"
+let private stylesheet = Stylesheet.load "./styles/counter.module.css"
 
 Html.div [
-  prop.className stylesheet.["container"]
-  prop.children [
-    Html.h1 "Counter"
-    Html.button [ ]
-  ]
+    prop.className stylesheet.["container"]
+    prop.children [
+        Html.h1 "Counter"
+        Html.button [ ]
+    ]
 ]
 ```
 
@@ -119,13 +119,11 @@ Html.div [
 You can still use global classes for your application and use them everywhere but you have to specify that they are indeed global as follows:
 ```css
 /* File ./styles/global.css */
-:global(.container) {
+.container {
   padding: 20px;
   color: lightblue;
 }
 ```
-Notice how the class was decorated with the `:global` directive. This effectively ensures that the class name is not mangled when compiled and that it can be used globally.
-
 You can then import this file in your F# entry point like this:
 ```fs
 open Fable.Core.JsInterop
